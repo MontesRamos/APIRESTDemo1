@@ -7,8 +7,13 @@ const cors=require('cors');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(cors());
+
+app.set('views','./views'); 
+app.set('view engine', 'ejs');
+
 app.get('/ruta1',(req,res)=>{
-	res.send("hellow world");
+	//res.send("hellow world");
+	res.render('vista1');
 })
 
 app.get('/ruta2',(req,res)=>{
