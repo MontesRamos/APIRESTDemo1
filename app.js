@@ -11,6 +11,10 @@ app.get('/ruta1',(req,res)=>{
 	res.send("hellow world");
 })
 
+app.get('/ruta2',(req,res)=>{
+	res.send("hola esta es una prueba desde EC2 Ubuntu");
+})
+
 //rutas
 var route_n1 = require('./routes/user');
 app.use('/example_route',route_n1);
